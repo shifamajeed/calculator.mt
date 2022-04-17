@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    button{width: 80px; height: 50px;}
+    input{width: 250px; height: 50px;}
+    table{ width: 300px; border-style:inset;}
+
+</style>
+
+
+
+</head>
+<body>
+    
+
+<table  align="center" bgcolor="white" cellpadding="10px">
+
+    <tr>
+        <td colspan="3">
+        <input type="text"name="" id="num" readonly style="background-color: aqua">
+        <td><button onclick="fnop('')"  style="background-color: red" >c</button></td>
+         </td>
+         </tr>
+    
+<tr>
+    
+    <td><button onclick="document.getElementById('num').value+=7">7</button></td>
+    <td><button onclick="document.getElementById('num').value+=8">8</button></td>
+    <td><button onclick="document.getElementById('num').value+=9">9</button></td>
+    <td><button onclick="fnop('/')" style="background-color: rgb(245, 145, 13);">/</button></td>
+    
+    
+</tr>
+<tr>
+    
+    <td><button onclick="document.getElementById('num').value+=4">4</button></td>
+    <td><button onclick="document.getElementById('num').value+=5">5</button></td>
+    <td><button onclick="document.getElementById('num').value+=6">6</button></td>
+    <td><button onclick="fnop('*')" style="background-color:  rgb(245, 145, 13);">*</button></td>
+    
+    
+</tr>
+
+<tr>
+    
+    <td><button onclick="document.getElementById('num').value+=1">1</button></td>
+    <td><button onclick="document.getElementById('num').value+=2">2</button></td>
+    <td><button onclick="document.getElementById('num').value+=3">3</button></td>
+    <td><button onclick="fnop('-')" style="background-color:  rgb(245, 145, 13);">-</button></td>
+    
+    
+</tr>
+
+<tr>
+    
+    <td><button onclick="document.getElementById('num').value+=0">0</button></td>
+    <td><button onclick="document.getElementById('num').value+='.'">.</button></td>
+    <td><button onclick="fneq()" style="background-color: rgb(76, 209, 226);" >=</button></td>
+    <td><button onclick="fnop('+')" style="background-color: rgb(245, 145, 13);">+</button></td>
+    
+    
+</tr>
+
+</table>
+
+<script>
+
+function fnop(op){
+ operator=op
+num1=Number(document.getElementById('num').value)
+document.getElementById('num').value=""
+
+}
+
+function fneq(){
+    num2=Number(document.getElementById('num').value)
+    
+    if (operator=="+") {
+        document.getElementById('num').value=(num1+num2)
+    }
+    
+    if (operator=="-") {
+        document.getElementById('num').value=(num1-num2)
+        
+    }
+    
+    if (operator=="*") {
+        document.getElementById('num').value=(num1*num2)
+        
+    }
+    
+    if (operator=="/") {
+        document.getElementById('num').value=(num1/num2)
+        
+    }
+     }
+    
+
+</script>
+
+
+
+</body>
+</html>
